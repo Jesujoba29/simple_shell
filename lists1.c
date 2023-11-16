@@ -27,7 +27,7 @@ size_t list_len(const list_t *h)
 char **list_to_strings(list_t *head)
 {
 	list_t *node = head;
-	size_t i = list_len(head), t
+	size_t i = list_len(head), t;
 	char **strs;
 	char *str;
 
@@ -81,7 +81,7 @@ size_t print_list(const list_t *h)
 /**
  * node_starts_with - node return whose string starts
  * @node:list head
- * @prefix: string
+ * @prefix: strinig
  * @c: character match
  *
  * Return: 0 or node

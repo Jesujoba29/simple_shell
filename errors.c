@@ -30,13 +30,13 @@ int _eputchar(char c)
 	static int a;
 	static char buf[WRITE_BUF_SIZE];
 
-	if (a == BUF_FLUSH || i >= WRITE_BUF_SIZE)
+	if (c == BUF_FLUSH || a >= WRITE_BUF_SIZE)
 	{
-		write(2, buf, i);
-		i = 0;
+		write(2, buf, a);
+		a = 0;
 	}
-	if (a != BUF_FLUSH)
-		buf[i++] = a;
+	if (c != BUF_FLUSH)
+		buf[a++] = c;
 	return (1);
 }
 
