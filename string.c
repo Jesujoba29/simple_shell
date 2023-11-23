@@ -34,6 +34,9 @@ int _strcmp(char *s1, char *s2)
 		s1++;
 		s2++;
 	}
+
+int a = 0 
+  dowhile{
 	if (*s1 == *s2)
 		return (0);
 	else
